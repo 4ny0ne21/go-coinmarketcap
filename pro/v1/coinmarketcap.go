@@ -192,6 +192,7 @@ type MapOptions struct {
 	Start         int
 	Limit         int
 	Symbol        string
+	Sort          string
 }
 
 // FiatMapOptions options
