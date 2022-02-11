@@ -416,6 +416,10 @@ func (s *CryptocurrencyService) Map(options *MapOptions) ([]*MapListing, error) 
 	if options.Symbol != "" {
 		params = append(params, fmt.Sprintf("symbol=%s", options.Symbol))
 	}
+	
+	if options.Sort != "" {
+		params = append(params, fmt.Sprintf("sort=%s", options.Sort))
+	}
 
 	url := fmt.Sprintf("%s/cryptocurrency/map?%s", baseURL, strings.Join(params, "&"))
 
